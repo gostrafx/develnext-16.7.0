@@ -1,0 +1,61 @@
+version = '0.6-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'osgi'
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'org.gradle.api.plugins:gradle-nexus-plugin:0.7.1'
+    }
+}
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+apply from: 'gradle/publish.gradle'
+
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+
+group = 'org.fxmisc.flowless'
+project.archivesBaseName = 'flowless'
+
+dependencies {
+    compile 'org.reactfx:reactfx:2.0-M5'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile "org.testfx:testfx-core:[4.0,4.1)"
+    testCompile "org.testfx:testfx-junit:[4.0,4.1)"
+}
+
+javadoc {
+    // ignore missing Javadoc comments or tags
+    options.addStringOption('Xdoclint:all,-missing', '-quiet')
+
+    // support for JavaFX properties
+    options.addBooleanOption('javafx', true);
+
+    // resolve links to Java and JavaFX Javadocs
+    options.links = [
+        'http://docs.oracle.com/javase/8/docs/api/',
+        'http://docs.oracle.com/javase/8/javafx/api/'
+    ]
+}
+
+task fatJar(type: Jar, dependsOn: classes) {
+    appendix = 'fat'
+    from sourceSets.main.output
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+}
+
+assemble.dependsOn fatJar
+
+task getVersion << {
+  println version
+}

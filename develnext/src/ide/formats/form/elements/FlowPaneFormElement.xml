@@ -1,0 +1,33 @@
+<element extends="NodeFormElement">
+    <properties>
+        <property code="orientation" name="Orientation" editor="enum">
+            <variants>
+                <variant value="HORIZONTAL">Horizontal</variant>
+                <variant value="VERTICAL">Vertical</variant>
+            </variants>
+        </property>
+        <property code="hgap" name="Horizontal Spacing" editor="float" />
+        <property code="vgap" name="Vertical spacing" editor="float" />
+        <property code="alignment" name="Alignment" editor="position" />
+        <property code="rowValignment" name="Inline alignment" editor="enum">
+            <variants>
+                <variant value="TOP">Top</variant>
+                <variant value="CENTER">Center</variant>
+                <variant value="BASELINE">Baseline</variant>
+                <variant value="BOTTOM">Bottom</variant>
+            </variants>
+        </property>
+        <property code="columnHalignment" name="Column alignment" editor="enum">
+            <variants>
+                <variant value="LEFT">Left</variant>
+                <variant value="CENTER">Center</variant>
+                <variant value="RIGHT">Right</variant>
+            </variants>
+        </property>
+
+        <property code="paddingTop" name="padding (Top)" editor="float" />
+        <property code="paddingRight" name="padding (Right)" editor="float" />
+        <property code="paddingBottom" name="padding (Bottom)" editor="float" />
+        <property code="paddingLeft" name="padding (Left)" editor="float" />
+    </properties>
+</element>

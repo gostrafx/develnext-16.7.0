@@ -1,0 +1,9 @@
+apply plugin: 'maven'
+
+sourceSets {
+    main.java.srcDirs = ['src']
+}
+
+dependencies {
+
+}

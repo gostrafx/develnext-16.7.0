@@ -1,0 +1,1 @@
+<?function test(?iterable $x) {    var_dump($x);}function gen(): iterable {    yield 1;}test(gen());

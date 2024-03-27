@@ -1,0 +1,8 @@
+<element extends="ButtonBaseFormElement">
+    <properties group="style" title="Style" sort="100">
+        <property code="color" name="Basic Color" editor="color" />
+        <property code="hoverColor" name="Hover Color" editor="color" />
+        <property code="clickColor" name="Click Color" editor="color" />
+        <property code="borderRadius" name="Border Radius" editor="float" />
+    </properties>
+</element>

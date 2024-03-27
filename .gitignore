@@ -1,0 +1,25 @@
+*.class
+
+# Package Files #
+*.war
+*.ear
+*.iml
+*.ipr
+*.iws
+/api/
+/classes/
+/build/
+/lib/
+/out/
+.idea/
+settings.xml
+
+/.gradle/
+build/
+
+gradle.properties
+secret.asc
+
+develnext/misc/library/bundles/*/*.jar
+
+out/

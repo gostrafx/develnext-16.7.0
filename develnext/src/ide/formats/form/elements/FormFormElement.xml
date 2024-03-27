@@ -1,0 +1,59 @@
+<element>
+    <properties group="bindings" title="Functional">
+        <property code="modules" name="Modules" editor="moduleList" tooltip="Connected modules to the form" formConfig="1" />
+        <property code="form.withPrototypes" name="For prototypes" editor="boolean" tooltip="Ability to use form components as prototypes in other forms" formConfig="1" />
+    </properties>
+
+    <properties group="general" title="Main">
+        <property code="form.title" name="Header" editor="text" tooltip="Window Title" formConfig="1" />
+        <property code="form.alwaysOnTop" name="Over all windows" editor="boolean" formConfig="1" tooltip="Always display a window on top of all other windows" />
+        <property code="form.resizable" name="Resizable" editor="boolean" formConfig="1" defaultValue="1"
+                  tooltip="Ability to resize the window - height and width" />
+
+        <property code="form.maximized" name="In full screen" editor="boolean" formConfig="1" tooltip="Expand window to full screen on creation" />
+
+        <property code="form.style" name="Style" editor="enum" formConfig="1" defaultValue="DECORATED">
+            <variants>
+                <variant value="DECORATED">Standard</variant>
+                <variant value="UNDECORATED">No frame</variant>
+                <variant value="TRANSPARENT">Transparent</variant>
+                <variant value="UTILITY">Utility</variant>
+                <variant value="WIDGET">Widget</variant>
+            </variants>
+        </property>
+        <property code="form.modality" name="Modality" editor="boolean" formConfig="1" defaultValue="0" />
+        <property code="form.icon" name="Icon" editor="image" formConfig="1" defaultValue="" />
+    </properties>
+    <properties group="extra" title="Additionally">
+        <property code="form.backgroundColor" realCode="backgroundColor" name="Background color" editor="color" formConfig="1" defaultValue="" />
+        <property code="classesString" name="Classe(s) CSS" editor="text" tooltip="A class or several classes separated by a space" />
+
+        <property code="size" name="Dimensions (W, H)" editor="doubleArray" tooltip="Dimensions, width (width) + height (height)" />
+    </properties>
+
+    <eventTypes>
+        <eventType code="click" name="Mouse click" kind="MouseParamEvent" icon="icons/mouseEx16.png" />
+
+        <eventType code="mouseDown" name="Mouse Down" kind="MouseParamEvent" icon="icons/mouse16.png" />
+        <eventType code="mouseUp" name="Mouse Up" kind="MouseParamEvent" icon="icons/mouse16.png" />
+
+        <eventType code="mouseDrag" name="Mouse Drag" kind="MouseEvent" icon="icons/drag16.png" />
+        <eventType code="mouseMove" name="Mouse Move" kind="MouseEvent" icon="icons/cursor16.png" />
+
+        <eventType code="mouseEnter" name="Mouse Enter" kind="MouseEvent" icon="icons/cursor16.png" />
+        <eventType code="mouseExit" name="Mouse Exit" kind="MouseEvent" icon="icons/cursor16.png" />
+
+        <eventType code="showing" name="Showing" kind="WindowEvent" />
+        <eventType code="show" name="show" kind="WindowEvent" />
+        <eventType code="hide" name="Hide" kind="WindowEvent" />
+        <eventType code="close" name="Close" kind="WindowEvent" />
+
+        <eventType code="keyDown" name="Key Down" kind="KeyParamEvent" icon="icons/key16.png" />
+        <eventType code="keyUp" name="Key Up" kind="KeyParamEvent" icon="icons/key16.png" />
+        <eventType code="keyPress" name="Key Press" kind="KeyEvent" icon="icons/keyboard16.png" />
+
+        <eventType code="scroll" name="Scrolling" kind="ScrollParamEvent" icon="icons/scroll16.png" />
+
+        <eventType code="construct" name="Form loading" kind="ActionEvent"  icon="icons/loadingEvent16.png" />
+    </eventTypes>
+</element>

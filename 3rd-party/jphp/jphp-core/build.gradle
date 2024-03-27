@@ -1,0 +1,16 @@
+apply plugin: 'maven'
+
+sourceSets {
+    main.java.srcDirs = ['src']
+    main.resources.srcDirs = ['resources']
+    test.java.srcDirs = ["tests"]
+    test.resources.srcDirs = ["tests"]
+}
+
+dependencies {
+    compile project(':jphp-runtime')
+    compile group: 'org.ow2.asm', name: 'asm-all', version:'5.2'
+
+    testCompile 'junit:junit:4.+'
+    testCompile project(':jphp-zend-ext')
+}

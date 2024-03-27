@@ -1,0 +1,11 @@
+<element extends="NodeFormElement">
+    <properties>
+        <property code="spacing" name="Spacing" editor="float" />
+        <property code="alignment" name="Alignment" editor="position" />
+
+        <property code="paddingTop" name="Padding (Top)" editor="float" />
+        <property code="paddingRight" name="Padding (Right)" editor="float" />
+        <property code="paddingBottom" name="Padding (Bottom)" editor="float" />
+        <property code="paddingLeft" name="Padding (Left)" editor="float" />
+    </properties>
+</element>

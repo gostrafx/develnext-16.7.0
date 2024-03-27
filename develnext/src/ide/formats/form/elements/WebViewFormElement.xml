@@ -1,0 +1,13 @@
+<element extends="NodeFormElement">
+    <properties>
+        <property code="url" name="URL" editor="text" virtual="1" />
+        <property code="contextMenuEnabled" name="Context menu" editor="boolean" virtual="1" />
+        <property code="style" name="CSS style" editor="none" />
+    </properties>
+
+    <eventTypes>
+        <eventType code="load" name="After loading" kind="ActionEvent" />
+        <eventType code="running" name="Before download" kind="ActionEvent" />
+        <eventType code="fail" name="loading error" kind="ActionEvent" />
+    </eventTypes>
+</element>
